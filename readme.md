@@ -12,7 +12,7 @@ Step 2: Set up environment
 
     cd HorsePower && git checkout improve-code && source ./setup_env.sh
 
-Step 3: Deplpy library and data
+Step 3: Deploy library and data
 
     ./deploy.sh
 
