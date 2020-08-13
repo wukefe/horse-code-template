@@ -19,7 +19,6 @@ opt2="-o fp1 -o fa -o fp2"
 if [ -z ${opt} ]; then
     opt=${opt2}
 fi
-HORSE_HYPER_HIR="/home/sable/hanfeng.c/github/branch-plan2ir/tests/hyper/work-hir"
 
 compile_code(){
     kind=$1
@@ -33,6 +32,8 @@ compile_code(){
 compile_code_naive(){
     kind="naive"
     mkdir -p ${kind}
+    echo "** Compiling HorsePower **"
+    (cd ${HORSE_SRC_CODE} && ./make.sh release)
     for id in ${query_set[@]}
     do
         echo "** [Naive] Compiling query ${id} **"
@@ -44,6 +45,8 @@ compile_code_opt(){
     kind="opt"
     opt=""
     mkdir -p ${kind}
+    echo "** Compiling HorsePower **"
+    (cd ${HORSE_SRC_CODE} && ./make.sh release)
     for id in ${query_set[@]}
     do
         echo "** [Opt] Compiling query ${id} **"
