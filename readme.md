@@ -10,7 +10,7 @@ Step 1: Download HorsePower
 
 Step 2: Set up environment
 
-    cd HorsePower && git checkout improve-code && source ./setup_env.sh
+    cd HorsePower && git checkout 10e6c4a8dfe57b6665822f4f2a0b6589ededbe5e && source ./setup_env.sh
 
 Step 3: Deploy library and data
 

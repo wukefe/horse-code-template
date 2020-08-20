@@ -43,7 +43,6 @@ compile_code_naive(){
 
 compile_code_opt(){
     kind="opt"
-    opt=""
     mkdir -p ${kind}
     echo "** Compiling HorsePower **"
     (cd ${HORSE_SRC_CODE} && ./make.sh release)

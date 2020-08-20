@@ -60,7 +60,7 @@ run_build(){
 }
 
 run_build_time(){
-    local log_file="${log_folder}/build_log_${kind}_time.txt"
+    local log_file="${log_folder}/build_log_${mykind}_time.txt"
     rm -f ${log_file}
     echo "** Logging to ${log_file} **"
     for id in ${query_set[@]}
@@ -128,8 +128,8 @@ run_report(){
 
 run_report_build(){
     local log_file="${log_folder}/build_log_${kind}_time.txt"
-    echo "Fetch compilation time (s) from ${log_file}"
-    cat ${log_file} | grep "TOTAL" | awk -F " " '{print $5}' | python util/convert.py
+    echo "Fetch compilation time (ms) from ${log_file}"
+    cat ${log_file} | grep "TOTAL" | awk -F " " '{print $5}' | python util/report-all.py
 }
 
 set_log(){
