@@ -127,7 +127,7 @@ run_report(){
 }
 
 run_report_build(){
-    local log_file="${log_folder}/build_log_${kind}_time.txt"
+    local log_file="${log_folder}/build_log_${mykind}_time.txt"
     echo "Fetch compilation time (ms) from ${log_file}"
     cat ${log_file} | grep "TOTAL" | awk -F " " '{print $5}' | python util/report-all.py
 }
