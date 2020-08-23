@@ -6,7 +6,7 @@ Note: Find a clearn folder to run the following code
 
 Step 1: Download HorsePower
 
-    git clone git@github.com:Sable/HorsePower.git
+    git clone https://github.com/Sable/HorsePower
 
 Step 2: Set up environment
 
@@ -22,11 +22,11 @@ Jump back to the parent folder
 
 Step 4: Download this repo
 
-    git clone git@github.com:wukefe/horse-code-template.git code-template
+    git clone https://github.com/wukefe/horse-code-template code-template
 
 Step 5: Generate optimized code and run
 
-    cd code-template && ./make.sh code opt && ./run-all.sh 1
+    cd code-template && ./make.sh lib && ./make.sh code opt && ./run-all.sh 1
 
 Step 6: Fetch results from the log folder, e.g. `log/run1`
 
